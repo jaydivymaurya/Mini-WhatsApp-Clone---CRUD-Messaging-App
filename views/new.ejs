@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create New Chat</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#ece5dd;
+        }
+
+        .container{
+            width:400px;
+            margin:50px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            color:#075E54;
+        }
+
+        input, textarea{
+            width:90%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#128C7E;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#075E54;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>Create New Chat</h2>
+
+        <form action="/chats" method="POST">
+
+            <input
+                type="text"
+                name="from"
+                placeholder="Enter sender name"
+                required
+            >
+
+            <input
+                type="text"
+                name="to"
+                placeholder="Enter receiver name"
+                required
+            >
+
+            <textarea
+                name="msg"
+                rows="4"
+                placeholder="Enter message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Create Chat
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
