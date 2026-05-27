@@ -90,7 +90,9 @@ app.get("/chats/new",(req,res)=>{
 });
 //root 
 app.get("/", (req, res) => {
-  res.send("working root");
+  res.redirect("/chats")
+ // res.send("working root");
+   
 });
 
 app.listen(8080, () => {
